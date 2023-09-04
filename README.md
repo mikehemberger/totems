@@ -35,13 +35,13 @@ The cutouts were resized to 224x224 pixels, and feature extraction was performed
 
 Below is a checklist of the notebooks and Python files used in this project, along with a brief description of each:
 
-**1.**`video-ETL.ipynb`: Description of what this notebook does.
+**1.**`video-ETL.ipynb`: Takes in the roboflow-annotated dataset of totems and produces image "cutouts" (using bbox coordinates) from every frame.
 
 
-**2.**`prototype_v1-video-feature-extraction.ipynb`: Description of what this notebook does.
+**2.**`prototype_v1-video-feature-extraction.ipynb`: Does the same process as above but following a physical building phase of the prototype. LEDs were annotated to get a better grasp / understanding of the complexitiy to expect from totem forms "in the wild".
 
+**3.**`totem_utils.py`: Helpful python yolo annotated and transformation tools used in the notebooks.
 
-**3.**`totem_utils.py`: Description of what this Python file does.
 
 ## Video Overview
 
