@@ -33,7 +33,11 @@ The cutouts were resized to 224x224 pixels, and feature extraction was performed
 Below is a checklist of the notebooks and Python files used in this project, along with a brief description of each:
 
 **1.**`video-ETL.ipynb`: Description of what this notebook does.
+
+
 **2.**`prototype_v1-video-feature-extraction.ipynb`: Description of what this notebook does.
+
+
 **3.**`totem_utils.py`: Description of what this Python file does.
 
 ## Video Overview
@@ -55,6 +59,8 @@ The following table provides a detailed description of the original video for ea
 # To-Do List
 
 **-** Train a neural network for totem detection so that new videos can be automatically annotated.
+
+
 **-** Check performance and test on an un-annotated video.
 
 # Prototype Totem v1-2
@@ -66,11 +72,14 @@ We have developed a physical prototype of a totem using an umbrella and LEDs cli
 Using the methodologies described above, we were able to identify distinct LED states at home using a totem prototype. Here's a brief overview of how we achieved this:
 
 **1.****Data Collection******: We collected video data from the totem prototype in various lighting conditions and times of day.
+
+
 **2.****Data Processing******: The video data was processed and annotated using the Roboflow platform, similar to the process described in the Data Collection and Processing section.
+
 
 state 0 and state 1 as comparison:
 
-![prototype-v2-state0](readme-images/prototype-v2-video-state-0-ezgif-video-to-gif.gif)![prototype-v2-state0](https://file+.vscode-resource.vscode-cdn.net/Users/mikehemberger/Documents/vscode/totems/readme-images/prototype-v2-video-state-0-ezgif-video-to-gif.gif)
+![prototype-v2-state0](readme-images/prototype-v2-video-state-0-ezgif-video-to-gif.gif "state 0")![prototype-v2-state1](readme-images/prototype-v2-video-state-1-ezgif-video-to-gif.gif "state 1")
 
 
 **3.****Feature Extraction and Analysis******: We extracted features from the processed images using the ViT model and analyzed the feature vectors using t-SNE. This allowed us to identify distinct LED states over time.
