@@ -18,7 +18,7 @@ Example - Short video clip:
 
 The video material was collected and uploaded to the Roboflow platform for annotation (https://app.roboflow.com/mike-hemberger-ukw3b/totem-tracker/12). The primary method of annotation was bounding boxes (bboxes), but in some cases, segmentation masks were also used.
 
-After manual annotation, the dataset was exported to disk. We then read in the image and its annotations, limiting ourselves to bboxes (bboxes extracted from segmentation masks). This process allowed us to cut out the totem for each video image frame over time.
+After manual annotation, the dataset was exported to disk (folder: "roboflow-dataset-download/"). We then read in the image and its annotations, limiting ourselves to bboxes (bboxes extracted from segmentation masks). This process allowed us to cut out the totem for each video image frame over time.
 
 Example of totems:
 
@@ -26,9 +26,9 @@ Example of totems:
 
 ### Feature Extraction and Analysis
 
-The cutouts were resized to 224x224 pixels, and feature extraction was performed on the images using the Vision Transformer (ViT) model from Hugging Face Transformers. The extracted feature vectors were then subjected to t-Distributed Stochastic Neighbor Embedding (t-SNE) for analysis. The goal of this process is to identify distinct "states" of the totems' light-emitting activity over time. While time is implicitly retained as an axis, it is replaced with a 2D t-SNE axis to better visualize the evolution of these states. 
+The cutouts were resized to 224x224 pixels, and feature extraction was performed on the images using the Vision Transformer (ViT) model from Hugging Face Transformers. The n subjected to t-Distributed Stochastic Neighbor Embedding (t-SNE) for analysis. The goal of this process is to identify distinct "states" of the totems' light-emitting activity over time. While time is implicitly retained as an axis, it is replaced with a 2D t-SNE axis to better visualize the evolution of these states.
 
-![totems](readme-images/prototype-v2-tsne-states_.png)
+![totems](readme-images/prototype-v2-tsne-states_.jpg)
 
 
 ## Notebook and Python Files

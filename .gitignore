@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 data/
+roboflow-dataset-download/
 #data/data-prototype/
 
 # C extensions
