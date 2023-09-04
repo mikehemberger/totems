@@ -8,7 +8,7 @@ The majority of our observations and data collection occur during the night, all
 
 ## Data Sources
 
-Our data is sourced from a variety of platforms, including YouTube videos and personal videos contributed by friends and family. Each totem has a detailed description of its original video, which can be found in a later section of this document.
+Our data is sourced from a variety of platforms, including YouTube videos and personal videos contributed by friends and family. Each totem has a detailed description of its original video, which can be found in a later section of this document. As video data presents some file size challenges, the data will become available later as a hosted huggingface dataset (TODO))
 
 Example - Short video clip:
 
@@ -22,7 +22,7 @@ After manual annotation, the dataset was exported to disk. We then read in the i
 
 Example of totems:
 
-![prototype-v2-tsne-states](readme-images/prototype-v2-tsne-states.png)
+![totems](readme-images/testsave.jpg)
 
 ### Feature Extraction and Analysis
 
@@ -67,6 +67,12 @@ Using the methodologies described above, we were able to identify distinct LED s
 
 **1.****Data Collection******: We collected video data from the totem prototype in various lighting conditions and times of day.
 **2.****Data Processing******: The video data was processed and annotated using the Roboflow platform, similar to the process described in the Data Collection and Processing section.
+
+state 0 and state 1 as comparison:
+
+![prototype-v2-state0](readme-images/prototype-v2-video-state-0-ezgif-video-to-gif.gif)![prototype-v2-state0](https://file+.vscode-resource.vscode-cdn.net/Users/mikehemberger/Documents/vscode/totems/readme-images/prototype-v2-video-state-0-ezgif-video-to-gif.gif)
+
+
 **3.****Feature Extraction and Analysis******: We extracted features from the processed images using the ViT model and analyzed the feature vectors using t-SNE. This allowed us to identify distinct LED states over time.
 
 ![prototype-v2-tsne-states](readme-images/prototype-v2-tsne-states.png)
