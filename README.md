@@ -28,7 +28,7 @@ Example of totems:
 
 The cutouts were resized to 224x224 pixels, and feature extraction was performed on the images using the Vision Transformer (ViT) model from Hugging Face Transformers. The extracted feature vectors were then subjected to t-Distributed Stochastic Neighbor Embedding (t-SNE) for analysis. The goal of this process is to identify distinct "states" of the totems' light-emitting activity over time. While time is implicitly retained as an axis, it is replaced with a 2D t-SNE axis to better visualize the evolution of these states. 
 
-<pre class="vditor-reset" placeholder="" contenteditable="true" spellcheck="false"><p data-block="0"><br class="Apple-interchange-newline"/><img src="https://file+.vscode-resource.vscode-cdn.net/Users/mikehemberger/Documents/vscode/totems/readme-images/prototype-v2-tsne-states.png" alt="prototype-v2-tsne-states"/></p></pre>
+![totems](readme-images/prototype-v2-tsne-states_.png)
 
 
 ## Notebook and Python Files
