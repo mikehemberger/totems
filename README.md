@@ -28,6 +28,9 @@ Example of totems:
 
 The cutouts were resized to 224x224 pixels, and feature extraction was performed on the images using the Vision Transformer (ViT) model from Hugging Face Transformers. The extracted feature vectors were then subjected to t-Distributed Stochastic Neighbor Embedding (t-SNE) for analysis. The goal of this process is to identify distinct "states" of the totems' light-emitting activity over time. While time is implicitly retained as an axis, it is replaced with a 2D t-SNE axis to better visualize the evolution of these states.
 
+<pre class="vditor-reset" placeholder="" contenteditable="true" spellcheck="false"><p data-block="0"><br class="Apple-interchange-newline"/><img src="https://file+.vscode-resource.vscode-cdn.net/Users/mikehemberger/Documents/vscode/totems/readme-images/prototype-v2-tsne-states.png" alt="prototype-v2-tsne-states"/></p></pre>
+
+
 ## Notebook and Python Files
 
 Below is a checklist of the notebooks and Python files used in this project, along with a brief description of each:
@@ -76,12 +79,14 @@ Using the methodologies described above, we were able to identify distinct LED s
 
 **2.****Data Processing******: The video data was processed and annotated using the Roboflow platform, similar to the process described in the Data Collection and Processing section.
 
+BBOX LED ILLUSTRATION HERE ----- 
+
+ILLUSTRATION HERE ---- Light intensity normalization over time
 
 state 0 and state 1 as comparison:
 
 ![prototype-v2-state0](readme-images/prototype-v2-video-state-0-ezgif-video-to-gif.gif "state 0")![prototype-v2-state1](readme-images/prototype-v2-video-state-1-ezgif-video-to-gif.gif "state 1")
 
+**3.****Feature Extraction and Analysis******: We extracted features from the processed images using the ViT model and analyzed the feature vectors using t-SNE. This allowed us to identify distinct LED states over time. 
 
-**3.****Feature Extraction and Analysis******: We extracted features from the processed images using the ViT model and analyzed the feature vectors using t-SNE. This allowed us to identify distinct LED states over time.
-
-![prototype-v2-tsne-states](readme-images/prototype-v2-tsne-states.png)
+ILLUSTRATION HERE ----
