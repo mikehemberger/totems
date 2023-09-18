@@ -63,8 +63,6 @@ The following table provides a detailed description of the original video for ea
 
 We have developed a physical prototype of a totem using an umbrella and LEDs clipped to its mantle, mimicking a bioluminescent jellyfish. We have analyzed the LED activity patterns over time and applied t-SNE for state identification, which has proven to be effective.
 
-
-
 ## Identifying LED States at Home
 
 Using the methodologies described above, we were able to identify distinct LED states at home using a totem prototype. Here's a brief overview of how we achieved this:
@@ -75,8 +73,13 @@ Using the methodologies described above, we were able to identify distinct LED s
 
 **3.****Feature Extraction and Analysis******: We extracted features from the processed images using the ViT model and analyzed the feature vectors using t-SNE. This allowed us to identify distinct LED states over time.
 
-![prototype-v1](/Users/mikehemberger/Documents/vscode/totems/readme-images/from-presi-prototype-v1.png "state 0")
+
+![prototype-v1](readme-images/from-presi-prototype-v1.png "state 0")
 
 **4.LED-State Identification**: Lastly, the alignment of states identified from extracted video frames and the brightness emitted by individually annotated LEDs (n=34) along the chain.
 
 ![prototype-v1-states](readme-images/from-presi-prototype-v1-states.png "state 1")
+
+
+
+# Prototype Totem v2 TODO
