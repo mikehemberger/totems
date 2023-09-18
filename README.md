@@ -20,16 +20,12 @@ The video material was collected and uploaded to the Roboflow platform for annot
 
 After manual annotation, the dataset was exported to disk (folder: "roboflow-dataset-download/"). We then read in the image and its annotations, limiting ourselves to bboxes (bboxes extracted from segmentation masks). This process allowed us to cut out the totem for each video image frame over time.
 
-Example of totems:
-
-![totems](readme-images/testsave.jpg)
-
 ### Feature Extraction and Analysis
 
-The cutouts were resized to 224x224 pixels, and feature extraction was performed on the images using the Vision Transformer (ViT) model from Hugging Face Transformers. The n subjected to t-Distributed Stochastic Neighbor Embedding (t-SNE) for analysis. The goal of this process is to identify distinct "states" of the totems' light-emitting activity over time. While time is implicitly retained as an axis, it is replaced with a 2D t-SNE axis to better visualize the evolution of these states.
+The cutouts were resized to 224x224 pixels (see Figure 1), and feature extraction was performed on the images using the Vision Transformer (ViT) model from Hugging Face Transformers. Then subjected to t-Distributed Stochastic Neighbor Embedding (t-SNE) for analysis. The goal of this process is to identify distinct "states" of the totems' light-emitting activity over time. While time is implicitly retained as an axis, it is replaced with a 2D t-SNE axis to better visualize the evolution of these states (Figure 2).
 
-![totems](readme-images/prototype-v2-tsne-states_.jpg)
-
+![Figure1](readme-images/from-presi-annotated-totems-tSNE.png)
+![Figure2](readme-images/from-presi-example-totem-time-series-2.png)
 
 ## Notebook and Python Files
 
@@ -37,13 +33,11 @@ Below is a checklist of the notebooks and Python files used in this project, alo
 
 **1.**`video-ETL.ipynb`: Takes in the roboflow-annotated dataset of totems and produces image "cutouts" (using bbox coordinates) from every frame.
 
-
 **2.**`prototype_v1-video-feature-extraction.ipynb`: Does the same process as above but following a physical building phase of the prototype. LEDs were annotated to get a better grasp / understanding of the complexitiy to expect from totem forms "in the wild".
 
 **3.**`totem_utils.py`: Helpful python yolo annotated and transformation tools used in the notebooks.
 
-
-## Video Overview
+## Video Overview (incomplete)
 
 The following table provides a detailed description of the original video for each totem:
 
@@ -63,12 +57,13 @@ The following table provides a detailed description of the original video for ea
 
 **-** Train a neural network for totem detection so that new videos can be automatically annotated.
 
-
 **-** Check performance and test on an un-annotated video.
 
-# Prototype Totem v1-2
+# Prototype Totem v1
 
 We have developed a physical prototype of a totem using an umbrella and LEDs clipped to its mantle, mimicking a bioluminescent jellyfish. We have analyzed the LED activity patterns over time and applied t-SNE for state identification, which has proven to be effective.
+
+
 
 ## Identifying LED States at Home
 
@@ -76,17 +71,12 @@ Using the methodologies described above, we were able to identify distinct LED s
 
 **1.****Data Collection******: We collected video data from the totem prototype in various lighting conditions and times of day.
 
-
 **2.****Data Processing******: The video data was processed and annotated using the Roboflow platform, similar to the process described in the Data Collection and Processing section.
 
-BBOX LED ILLUSTRATION HERE ----- 
+**3.****Feature Extraction and Analysis******: We extracted features from the processed images using the ViT model and analyzed the feature vectors using t-SNE. This allowed us to identify distinct LED states over time.
 
-ILLUSTRATION HERE ---- Light intensity normalization over time
+![prototype-v1](/Users/mikehemberger/Documents/vscode/totems/readme-images/from-presi-prototype-v1.png "state 0")
 
-state 0 and state 1 as comparison:
+**4.LED-State Identification**: Lastly, the alignment of states identified from extracted video frames and the brightness emitted by individually annotated LEDs (n=34) along the chain.
 
-![prototype-v2-state0](readme-images/prototype-v2-video-state-0-ezgif-video-to-gif.gif "state 0")![prototype-v2-state1](readme-images/prototype-v2-video-state-1-ezgif-video-to-gif.gif "state 1")
-
-**3.****Feature Extraction and Analysis******: We extracted features from the processed images using the ViT model and analyzed the feature vectors using t-SNE. This allowed us to identify distinct LED states over time. 
-
-ILLUSTRATION HERE ----
+![prototype-v1-states](readme-images/from-presi-prototype-v1-states.png "state 1")

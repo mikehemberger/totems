@@ -1,3 +1,11 @@
+import numpy as np
+
+def get_bbox(df:dict, frame:str):
+    x = df[frame][0,0], df[frame][0,1], df[frame][0,1], df[frame][0,0], df[frame][0,0]
+    y = df[frame][1,0], df[frame][1,0], df[frame][1,1], df[frame][1,1], df[frame][1,0]
+
+    return np.vstack((x,y)).T
+
 
 # def yolo_to_pixel(x_center, y_center, width, height, image_width, image_height):
 #     """
